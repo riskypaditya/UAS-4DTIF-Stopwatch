@@ -63,6 +63,8 @@ $(document).ready(function () {
     }
   });
   $(".reset").click(function () {
+    $("img.refresh").hide();
+    $(".record").prop("disabled", true);
     reset();
   });
   $(".record").click(function (e) {
