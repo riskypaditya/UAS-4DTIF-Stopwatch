@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "DigitalFont";
+  src: url("font/alarmclock.ttf");
+}
+.clear {
+  clear: both;
+}
+.logo {
+  width: 20%;
+}
+.logo img {
+  width: 50%;
+  display: block;
+  margin: 5px auto;
+}
+.logo h3 {
+  text-align: center;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#stopwatch {
+  margin: 0 auto;
+  width: 60%;
+  padding: 30px 10px;
+  background-color: #11052c;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+}
+#stopwatch::-webkit-scrollbar {
+  width: 8px;
+}
+
+#stopwatch::-webkit-scrollbar-track {
+  background-color: #d4ecdd;
+}
+
+#stopwatch::-webkit-scrollbar-thumb {
+  background-color: #5c527f;
+}
+.time-place {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  background-color: #11052c7a;
+  padding: 10px;
+  font-family: "DigitalFont";
+  transition: 1s;
+}
+.timer {
+  color: #11052c;
+  font-size: 50px;
+  border-radius: 20px;
+  background-color: #d4ecdd;
+  padding: 0 10px;
+  overflow-x: hidden;
+  transition: 1s;
+}
+.clock {
+  background-color: #5c527f;
+  color: #d4ecdd;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.control {
+  padding: 50px 10px 15px;
+  width: 90%;
+  display: flex;
+  margin: auto;
+}
+.control button {
+  flex-basis: 40%;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: transparent;
+  border: 1px #d4ecdd solid;
+  cursor: pointer;
+  color: #d4ecdd;
+  transition: 0.5s;
+  font-weight: bold;
+}
+.control button:hover {
+  background-color: #d4ecdd;
+  color: #11052c;
+}
+.list-record {
+  display: flex;
+  width: 80%;
+  margin-top: 30px !important;
+  margin: auto;
+  flex-direction: column;
+}
+.item-record {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  background-color: #d4ecdd;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30px;
+  flex-wrap: wrap;
+}
+.item-record img {
+  width: 10%;
+  border-radius: 50%;
+}
+.item-record button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: solid #11052c 2px;
+  background-color: transparent;
+  transition: 0.3s;
+}
+.item-record button:hover {
+  background-color: #11052c;
+  color: #d4ecdd;
+}
+.item-record button:disabled {
+  background-color: #11052c;
+  color: red;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+.rcTimer {
+  border: 1px solid #11052c;
+  padding: 10px;
+  font-family: "DigitalFont";
+  font-weight: bold;
+  text-align: center;
+}
+.logo-sm {
+  display: none;
+}
+img.refresh {
+  width: 7%;
+  padding: 5px;
+  transition: 1s;
+}
+img.refresh:hover {
+  background: #eaeaea;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+  .logo {
+    width: 8%;
+  }
+  #stopwatch {
+    width: 100%;
+    padding: 0;
+    min-height: 100vh;
+    padding-top: 15px !important;
+    border-radius: 0;
+  }
+  .timer {
+    font-size: 30px;
+  }
+  .clock {
+    margin-top: 0;
+    font-size: 15px;
+  }
+  .list-record {
+    width: 90%;
+  }
+  .list-record .rcTimer {
+    font-size: 25px;
+    padding: 5px;
+    width: 80%;
+    margin-top: 10px;
+  }
+  .item-record .record {
+    margin-top: 15px;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 556px) {
+  .logo h3 {
+    display: none;
+  }
+  .logo img {
+    width: 100%;
+  }
+}
